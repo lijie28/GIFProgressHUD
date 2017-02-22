@@ -42,7 +42,10 @@
     UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
     [window addSubview:imgGif];
     
+    //此时完事，但是有一个致命性问题，你看一下内存使用情况，已经要爆了吧，下面就是内存优化问题了
+    //当动画播放结束时延迟一秒我们释放掉self.imageView.animationImages的image对象
     
+    [imgGif performSelector:@selector(setAnimationImages:) withObject:nil afterDelay:imgGif.animationDuration + 1.0f];
 }
 
 @end
