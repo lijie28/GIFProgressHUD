@@ -54,7 +54,7 @@
     [imgGif performSelector:@selector(setAnimationImages:) withObject:nil afterDelay:imgGif.animationDuration + 1.0f];
     
 
-    
+    //hallo
     
 }
 
