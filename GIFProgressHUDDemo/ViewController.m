@@ -41,7 +41,7 @@
     [imgGif startAnimating];
     
     
-//    //置顶
+    //置顶
     UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
     [window addSubview:imgGif];
     
