@@ -10,4 +10,16 @@
 
 @interface GIFProgressHUD : NSObject
 
+/** set refreshing images' names */
+@property (nonatomic, strong) NSMutableArray *refreshingImages;
+
+
++ (instancetype)start;
+
++ (instancetype)end;
+
+- (void)start;
+
+- (void)end;
+
 @end

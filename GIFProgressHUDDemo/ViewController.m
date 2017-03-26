@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "GIFProgressHUD.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(100, 200, 200, 50);
+    [btn addTarget:self action:@selector(showProgress) forControlEvents:UIControlEventTouchUpInside];
+    btn.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btn];
+    
+    UIButton *btnEnd = [UIButton buttonWithType:UIButtonTypeCustom];
+    btnEnd.frame = CGRectMake(100, 300, 200, 50);
+    [btnEnd addTarget:self action:@selector(endProgress) forControlEvents:UIControlEventTouchUpInside];
+    btnEnd.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:btnEnd];
+}
+
+
+- (void)showProgress
+{
+   GIFProgressHUD *gitHud =  [[GIFProgressHUD alloc]init];
+    [gitHud start];
+//    gitHud setRefreshingImages:<#(NSMutableArray *)#>
+}
+
+- (void)endProgress
+{
+    GIFProgressHUD *gitHud = [[GIFProgressHUD alloc]init];
+    [gitHud end];
+}
+
+
+
+
+
+
+- (void)old
+{
     //loading
     NSMutableArray *refreshingImages = [NSMutableArray array];
     for (NSUInteger i = 1; i<=3; i++) {
@@ -41,24 +76,15 @@
     [imgGif startAnimating];
     
     
+    
     //置顶
     UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
     [window addSubview:imgGif];
     
+    [window bringSubviewToFront:imgGif];
+    
     [window makeKeyAndVisible];
-//    [self.view addSubview:imgGif];
-    
-    //此时完事，但是有一个致命性问题，你看一下内存使用情况，已经要爆了吧，下面就是内存优化问题了
-    //当动画播放结束时延迟一秒我们释放掉self.imageView.animationImages的image对象
-    
-    [imgGif performSelector:@selector(setAnimationImages:) withObject:nil afterDelay:imgGif.animationDuration + 1.0f];
-    
-
-    //hallo
-    
 }
-
-
 
 
 @end
