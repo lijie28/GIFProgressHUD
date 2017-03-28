@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A17E1471E89037F004EDA3C /* GiFHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A17E1451E89037F004EDA3C /* GiFHUD.m */; };
+		6A17E1481E89037F004EDA3C /* pika.gif in Resources */ = {isa = PBXBuildFile; fileRef = 6A17E1461E89037F004EDA3C /* pika.gif */; };
 		6A23E8DE1E5DA5C20012F0FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A23E8DD1E5DA5C20012F0FB /* main.m */; };
 		6A23E8E11E5DA5C20012F0FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A23E8E01E5DA5C20012F0FB /* AppDelegate.m */; };
 		6A23E8E41E5DA5C20012F0FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A23E8E31E5DA5C20012F0FB /* ViewController.m */; };
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6A17E1441E89037F004EDA3C /* GiFHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GiFHUD.h; sourceTree = "<group>"; };
+		6A17E1451E89037F004EDA3C /* GiFHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GiFHUD.m; sourceTree = "<group>"; };
+		6A17E1461E89037F004EDA3C /* pika.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = pika.gif; sourceTree = "<group>"; };
 		6A23E8D91E5DA5C20012F0FB /* GIFProgressHUDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GIFProgressHUDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A23E8DD1E5DA5C20012F0FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6A23E8DF1E5DA5C20012F0FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +86,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A17E1431E89037F004EDA3C /* GIFHUD */ = {
+			isa = PBXGroup;
+			children = (
+				6A17E1441E89037F004EDA3C /* GiFHUD.h */,
+				6A17E1451E89037F004EDA3C /* GiFHUD.m */,
+				6A17E1461E89037F004EDA3C /* pika.gif */,
+			);
+			path = GIFHUD;
+			sourceTree = "<group>";
+		};
 		6A23E8D01E5DA5C20012F0FB = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +119,7 @@
 		6A23E8DB1E5DA5C20012F0FB /* GIFProgressHUDDemo */ = {
 			isa = PBXGroup;
 			children = (
+				6A17E1431E89037F004EDA3C /* GIFHUD */,
 				6A23E90F1E5DAD0E0012F0FB /* GIFProgressHUD */,
 				6A23E8DF1E5DA5C20012F0FB /* AppDelegate.h */,
 				6A23E8E01E5DA5C20012F0FB /* AppDelegate.m */,
@@ -260,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A23E8EC1E5DA5C20012F0FB /* LaunchScreen.storyboard in Resources */,
+				6A17E1481E89037F004EDA3C /* pika.gif in Resources */,
 				6A23E8E91E5DA5C20012F0FB /* Assets.xcassets in Resources */,
 				6A23E8E71E5DA5C20012F0FB /* Main.storyboard in Resources */,
 			);
@@ -286,6 +303,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A17E1471E89037F004EDA3C /* GiFHUD.m in Sources */,
 				6A23E8E41E5DA5C20012F0FB /* ViewController.m in Sources */,
 				6A23E8E11E5DA5C20012F0FB /* AppDelegate.m in Sources */,
 				6A23E8DE1E5DA5C20012F0FB /* main.m in Sources */,
